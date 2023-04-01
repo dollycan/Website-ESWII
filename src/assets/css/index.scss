@@ -1,0 +1,107 @@
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+  }
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.hero-img {
+  max-width: 40%;
+}
+
+hr.star-light,
+hr.star-dark {
+  max-width: 15rem;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-top: solid 0.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-color: #fff;
+}
+
+hr {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-style: solid;
+  opacity: 1;
+  overflow: visible;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+div p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.products {
+  .products-container {
+    padding: 1rem 0 0 0;
+    margin: auto;
+  }
+
+  .portfolio-block.photography {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    .portfolio-block {
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+  }
+
+  .portfolio-block.photography .item {
+    overflow: hidden;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+
+  .portfolio-block.photography .item a img {
+    transition: 0.8s ease;
+  }
+
+  @media (min-width: 576px) {
+    .zoom-on-hover:hover .image {
+      transform: scale(1.3);
+      opacity: 0.85;
+    }
+  }
+
+  .item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .item h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  h3 {
+    padding: 0 0 2rem 0;
+    margin: 3.5rem 0 0 0;
+  }
+}

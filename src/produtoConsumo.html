@@ -12,8 +12,9 @@
     />
     <link rel="stylesheet" href="./assets/css/styles.scss" />
     <link rel="stylesheet" href="./assets/css/index.scss" />
+    <link rel="stylesheet" href="./assets/css/registoEntidade.scss" />
 
-    <title>Home · Grupo 3</title>
+    <title>Produto a consumir · Grupo 3</title>
   </head>
 
   <body
@@ -24,10 +25,10 @@
   >
     <nav
       id="mainNav"
-      class="navbar navbar-light navbar-expand-lg text-uppercase"
+      class="navbar navbar-dar navbar-expand-lg text-uppercase"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold" href="./">Grupo 3</a
+        <a class="navbar-brand fw-bold text-white" href="./">Grupo 3</a
         ><button
           class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
           data-bs-toggle="collapse"
@@ -42,20 +43,20 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a
-                class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold"
+                class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold text-white"
                 href="./registoEntidade.html"
                 >Registar Entidade</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a
-                class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold"
+                class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold text-white"
                 href="./registoProduto.html"
                 >Registar Produto</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold" href="/"
+              <a class="nav-link py-3 px-0 px-lg-3 rounded fw-semibold text-white" href="/"
                 >Marketplace</a
               >
             </li>
@@ -63,198 +64,73 @@
         </div>
       </div>
     </nav>
+    
 
-    <header
-      class="text-center text-white bg-primary masthead"
-      style="background: url(./imgs/background-brickwall.jpg)"
-    >
-      <div class="container">
-        <img
-          class="img-fluid d-block mx-auto mb-5 hero-img"
-          src="./imgs/hero.png"
-        />
-        <h1>EcoCerâmica</h1>
-        <hr class="star-light" />
-        <h2 class="font-weight-light text-capitalize mb-0">
-          Cerâmica sustentável - futuro responsável
-        </h2>
-      </div>
-    </header>
+    <h1 class="text-primary text-center fw-bold mt-5">Indique o produto que quer consumir</h1>
 
-    <section id="products" class="products">
-      <div class="container">
-        <h2 class="text-uppercase text-center text-secondary">Produtos</h2>
-        <hr class="star-dark mb-5" />
-        <div class="portfolio-block photography">
-          <div class="container products-container">
-            <div class="row g-3">
-              <div class="col-md-6 col-lg-4 m-auto item rounded zoom-on-hover">
-                <a href="./registoEntidade.html">
-                  <img
-                    class="img-fluid image rounded"
-                    src="./imgs/ceramics-products1.jpg"
-                  />
-                  <h4
-                    class="text-uppercase fw-semibold"
-                    name="products-heading"
-                  >
-                    Registar Entidade
-                  </h4>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-4 m-auto item rounded zoom-on-hover">
-                <a href="./registoProduto.html">
-                  <img
-                    class="img-fluid image rounded"
-                    src="./imgs/ceramics-products2.jpg"
-                  />
-                  <h4
-                    class="text-uppercase fw-semibold"
-                    name="products-heading"
-                  >
-                    Registar Produto
-                  </h4>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-4 m-auto item rounded zoom-on-hover">
-                <a href="/">
-                  <img
-                    class="img-fluid image rounded"
-                    src="./imgs/ceramics-products3.jpg"
-                  />
-                  <h4
-                    class="text-uppercase fw-semibold"
-                    name="products-heading"
-                  >
-                    Marketplace
-                  </h4>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="my-5 p-5" id="form-outter-container">
+      <form class="row w-50 m-auto">
+      <div class="row col-12 m-auto">
+        <label class="form-label col-5 text-end" for="inputEntityName" >Nome da entidade:</label>
+        <input class="col-3 text-start" type="text"  id="inputEntityName" aria-describedby="Nome da entidade" required maxlength="30">
       </div>
-    </section>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="entitySector" class="form-label col-6 rounded text-end">Setor a que pertence:</label> 
+        <select class="box col-3" name="entitySector" id="entitySector" required>
+          <option selected class="text-center">Escolha uma opção</option>
+          <option value="estrutural">Estrutural</option>
+          <option value="utilDecorativo">Util e Decorativo</option>
+          <option value="loucaSanitaria">Loiça Sanitária</option>
+          <option value="pavRevestimentos">Pavimentos e Revestimentos</option>
+          <option value="especiais">Especiais</option>
+        </select>
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="nif" class="form-label">Número de contribuinte:</label>
+        <input class="col-3 text-start" type="number"  id="nif" aria-describedby="nif" required maxlength="9" minlength="9">
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="cae" class="form-label">Código de atividade económica:</label>
+        <input class="col-3 text-start" type="number"  id="cae" aria-describedby="cae" required>
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="transportCapacity" class="form-label">Capacidade de transporte:</label>
+        <select class="box col-3 text-start" name="transportCapacity" id="transportCapacity" required>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="baseOperations" class="form-label">Base de operações:</label>
+        <input class="col-3 text-start" type="text"  id="baseOperations" aria-describedby="Base de operações" required maxlength="50">
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="officeLocation" class="form-label">Localização do esctirório:</label>
+        <input class="col-3 text-start" type="text"  id="officeLocation" aria-describedby="Localização do esctirório" required maxlength="50">
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="inputEmail" class="form-label">Email:</label>
+        <input class="col-3 text-start" type="email"  id="inputEmail" aria-describedby="Base de operações" required>
+      </div>
+      <div class="row col-12 m-auto">
+        <label class="col-5 text-end" for="cellphone" class="form-label">Telefone:</label>
+        <input class="col-3 text-start" type="number"  id="cellphone" aria-describedby="Telefone" required maxlength="9">
+      </div>
+        <div class="form-check form-check-inline row d-flex w-100 m-auto justify-content-center">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+         <label class="text-start" for="inlineRadio1">Consumidora</label>
+        </div>
+        <div class="form-check form-check-inline row d-flex flex-row w-100 m-auto justify-content-center">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Produtora</label>
+        </div>
+        <div class="w-100 d-flex">
+          <button type="submit" class="btn btn-primary col-4 m-auto">Registar</button>
+        </div>
+    </form>
+  </div>
 
-    <section
-      id="about"
-      class="text-white bg-primary mb-0"
-      style="background: url(./imgs/background-brickwall.jpg)"
-    >
-      <div class="container">
-        <h2 class="text-uppercase text-center text-white">Sobre Nós</h2>
-        <hr class="star-light mb-5" />
-        <div class="row aboutus-container">
-          <div class="col-lg-4 ms-auto">
-            <p class="lead">
-              Na EcoCerâmica, estamos comprometidos em criar um futuro mais
-              sustentável, e acreditamos que a reciclagem de cerâmica é uma
-              parte importante desse processo. Se você é uma empresa vendedora
-              ou consumidora, junte-se a nós e faça a diferença na redução do
-              desperdício e na promoção da sustentabilidade!
-              <br />
-              <br />
-              Somos um marketplace dedicado à reciclagem de cerâmica e à
-              sustentabilidade. O nosso objetivo é criar um ciclo de
-              reutilização mais sustentável nesta industria.
-            </p>
-          </div>
-          <div class="col-lg-4 me-auto">
-            <p class="lead">
-              Com a EcoCerâmica, as empresas que possuem cerâmicas excedentes
-              podem disponibilizá-las na nossa rede. <br />
-              Incentivamos também as empresas consumidoras a registarem-se para
-              consumir a cerâmica disponibilizada pelas empresas vendedoras.
-              Ajudando assim a reduzir a quantidade de resíduos gerados e a
-              criar um planeta mais sustentável.
-              <br />
-              <br />
-              Estamos comprometidos em fornecer uma plataforma simples e fácil
-              de usar, que permite às empresas conectarem-se umas com as outras.
-            </p>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-outline-light btn-xl" role="button" href="./registoEntidade.html"
-            ><span>Registe-se!</span></a
-          >
-        </div>
-      </div>
-    </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-uppercase text-center text-secondary mb-0">
-          Contacte-nos
-        </h2>
-        <hr class="star-dark mb-5" />
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <form id="contactForm" name="sentMessage">
-              <div class="control-group">
-                <div class="mb-0 form-floating controls pb-2">
-                  <input
-                    id="name"
-                    class="form-control"
-                    type="text"
-                    required
-                    placeholder="Name"
-                  /><label class="form-label">Nome</label
-                  ><small class="form-text text-danger help-block"></small>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="mb-0 form-floating controls pb-2">
-                  <input
-                    id="email"
-                    class="form-control"
-                    type="email"
-                    required
-                    placeholder="Email Address"
-                  /><label class="form-label">Endereço de Email</label
-                  ><small class="form-text text-danger help-block"></small>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="mb-0 form-floating controls pb-2">
-                  <input
-                    id="phone"
-                    class="form-control"
-                    type="tel"
-                    required
-                    placeholder="Phone Number"
-                  /><label class="form-label">Contacto Telefónico</label
-                  ><small class="form-text text-danger help-block"></small>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="mb-3 form-floating controls pb-2">
-                  <textarea
-                    id="message"
-                    class="form-control"
-                    required
-                    placeholder="Message"
-                    style="height: 150px"
-                  ></textarea
-                  ><label class="form-label">Mensagem</label
-                  ><small class="form-text text-danger help-block"></small>
-                </div>
-              </div>
-              <div id="success"></div>
-              <div>
-                <button
-                  id="sendMessageButton"
-                  class="btn btn-primary btn-xl"
-                  type="submit"
-                >
-                  Enviar
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <div
       class="pt-5"
